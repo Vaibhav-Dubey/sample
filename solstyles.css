@@ -1,0 +1,377 @@
+:root{
+    /* Theme Colors */
+    --dk-green: #166212;
+    --med-green: #21941b;
+    --lt-green: #AFCEB1;
+    --bright-green: #30d627;
+
+    /* Other Colors */
+    --white: #fff;
+    --lt-gray: #eaeaea;
+    --dk-gray: #222;
+    
+    /* Fonts */
+    --fonts: 'Sunflower', 'Trebuchet MS', sans-serif;
+}
+
+/* Body Styles */
+body{
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin: 0;
+    font-family: var(--fonts);
+    background-color: var(--lt-green);
+    color: var(--dk-gray);
+}
+
+/* Link Styles */
+a{
+    display: block;
+    padding: 1rem;
+}
+
+/* Image Styles */
+img{
+    display: block;
+}
+
+/* SVG Styles */
+svg{
+    display: block;
+    margin: 0 auto;
+    fill: var(--dk-green);
+}
+
+/* Text Styles */
+p{
+    width: 100%;
+    max-width: 55ch;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header{
+    padding: 1rem;
+    width: 968px;
+    margin: 0 auto;
+    background-color: var(--white);
+    border-bottom: 8px solid var(--lt-green);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+/* Header Logo Link Styles */
+header > a{
+    padding: 0;
+}
+
+/* Header Logo Styles */
+header img{
+    width: 225px;
+    height: auto;
+}
+
+/* Nav Styles */
+nav ul{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav a{
+    text-decoration: none;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 4px solid var(--white);
+    border-bottom: 4px solid var(--dk-green);
+    color: var(--dk-gray);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+nav a:hover{
+    border-color: var(--dk-green);
+}
+
+/* Main Styles */
+main{
+    width: 1000px;
+    padding: 2rem 0;
+    margin: 0 auto 8px auto;
+    background-color: var(--white);
+}
+
+/* Main Section Styles */
+main > section{
+    padding: 2rem 1rem;
+}
+
+/* Main Section Heading Styles */
+main h2{
+    font-size: 1.75rem;
+    padding: 0.5rem;
+    width: fit-content;
+    margin: 0;
+    background-color: var(--dk-green);
+    color: var(--white);
+}
+
+/* Profile Information Section Styles */
+#info div{
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1rem;
+    align-items: center;
+    width: 80%;
+    margin: 1rem auto;
+}
+
+/* Profile Heading Styles */
+#info h2{
+    grid-column: 1/-1;
+}
+
+/* Profile Image Styles */
+#info img{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    border: 2px solid var(--med-green);
+}
+
+/* Profile Information Styles */
+#info dl{
+    margin: 0;
+}
+
+#info dt{
+    font-weight: bold;
+    font-size: 1.35rem;
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+/* For the Edit Links for Each Piece of Information */
+dt a{
+    display: inline-block;
+    padding: 0;
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: var(--dk-green);
+}
+
+dt a:hover{
+    border: 1px solid var(--dk-green);
+    background-color: var(--white);
+}
+
+dt a:hover svg{
+    stroke: var(--dk-green);
+    fill: none;
+}
+
+dt svg{
+    margin: 0;
+    width: 20px;
+    height: 20px;
+    stroke: var(--white);
+}
+
+/* Notifications Section Styles */
+#notify div{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    width: 600px;
+    margin: 0 auto;
+}
+
+#notify section{
+    display: flex;
+    flex-direction: column;
+}
+
+#notify h3{
+    font-size: 1.45rem;
+    text-align: center;
+}
+
+#notify a{
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+#notify a:hover svg{
+    transform: scale(1.1);
+    fill: var(--med-green);
+    stroke: var(--med-green);
+}
+
+#notify svg{
+    width: 150px;
+    height: auto;
+    transition: all 300ms;
+    stroke: none;
+}
+
+#notify span{
+    display: block;
+    font-size: 1.25rem;
+    width: fit-content;
+    background-color: var(--bright-green);
+    padding: 0.25rem 0.8rem;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+
+#likes span{
+    top: 10px;
+    left: 140px;
+}
+
+#likes svg{
+    stroke-width: 0;
+    width: 135px;
+    margin: 1rem auto 0.5rem auto;
+}
+
+#messages span{
+    top: -15px;
+    left: 150px;
+}
+
+#messages a{
+    margin-top: 1.5rem;
+}
+
+#messages svg{
+    stroke-width: 0;
+}
+
+#friends span{
+    top: 10px;
+    left: 140px;
+}
+
+#friends svg{
+    stroke: var(--dk-green);
+    stroke-width: 1.5;
+}
+
+/* Styles for the Feedback Section */
+/* For the Paragraph */
+#feedback p{
+    margin: 1.5rem auto;
+}
+
+/* For the Form */
+form{
+    width: 300px;
+    margin: 0 auto;
+}
+
+input, label, textarea, #my-submit{
+    display: block;
+    font-family: var(--fonts);
+    font-weight: normal;
+    font-size: 1.1rem;
+}
+
+label{
+    margin: 0.5rem 0 0.25rem 0;
+    font-size: 1.25rem;
+}
+
+.required{
+    font-size: 1.5rem;
+    color: var(--dk-green);
+}
+
+input, textarea{
+    padding: 0.25rem;
+    width: 275px;
+    margin: 0 auto;
+    border: none;
+    background-color: var(--lt-gray);
+}
+
+input:invalid, textarea:invalid{
+    outline: 3px solid var(--bright-green);
+}
+
+input:focus, textarea:focus{
+    outline: 3px solid var(--dk-green);
+}
+
+#my-submit{
+    width: 50%;
+    margin: 1.5rem auto;
+    padding: 1rem;
+    font-family: var(--fonts);
+    font-size: 1.45rem;
+    font-weight: normal;
+    outline: none;
+    border: 4px solid var(--dk-green);
+    background-color: var(--dk-green);
+    color: var(--white);
+}
+
+#my-submit:focus{
+    border-color: var(--med-green);
+}
+
+#my-submit:hover{
+    background-color: var(--white);
+    color: var(--dk-green);
+}
+
+/* Footer Styles */
+footer{
+    padding: 1rem;
+    width: 968px;
+    margin: 0 auto;
+    background-color: var(--white);
+    text-align: center;
+    padding-top: 2rem;
+}
+
+/* For the Section in the Footer */
+footer section{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 0.5rem 1rem;
+    width: 520px;
+    margin: 0 auto 1rem auto;
+}
+
+footer h2{
+    margin: 0;
+    font-size: 1.35rem;
+    line-height: 1;
+    grid-column: 1/-1;
+}
+
+footer a{
+    padding: 0.5rem;
+    color: var(--dk-gray);
+    text-underline-offset: 4px;
+    text-decoration-color: var(--dk-green);
+    text-decoration-thickness: 2px;
+}
+
+footer a:hover{
+    color: var(--dk-green);
+}
+
+footer p{
+    font-size: 1rem;
+}
